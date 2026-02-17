@@ -40,7 +40,7 @@ export default function ExperienceSection() {
             Career Journey
           </h2>
           <h3 className="mb-12 text-balance text-3xl font-bold text-foreground md:text-5xl">
-            Work Experience
+              Experience
           </h3>
         </motion.div>
 

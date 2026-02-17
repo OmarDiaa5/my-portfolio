@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import AboutSection from "@/components/about-section";
 import EducationSection from "@/components/education-section";
 import ValueSection from "@/components/value-section";
+import ServicesSection from "@/components/services-section"; // تأكد من اسم الملف
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
       <ValueSection />
       <EducationSection />
       <SkillsSection />
