@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Github } from "lucide-react"; // ضفت دي عشان أيقونة جيت هاب
 
 const projects = [
   {
@@ -8,33 +9,37 @@ const projects = [
     description:
       "Achieved 95% accuracy using Transfer Learning with PyTorch and ResNet50. Utilized Hugging Face and UMAP clustering for advanced feature analysis.",
     tags: ["PyTorch", "Computer Vision"],
-    imageSrc: "\Real vs. Synthetic Image Classifier.png", // 👈 تأكد إن ده اسم الصورة في فولدر public
+    imageSrc: "/Real vs. Synthetic Image Classifier.png", 
     imageAlt: "Real vs Synthetic classifier visualization",
+    githubLink: "https://github.com/OmarDiaa5/Real-vs.-Synthetic-Image-Classification", // 👈 حط لينك الجيت هاب هنا
   },
-  {
-    title: "E-Commerce Web Application", // 👈 ضفت المشروع ده بناءً على طلباتك السابقة
+    {
+    title: "Moisture Guard AI-IoT",
     description:
-      "Developed a fully functional platform featuring user authentication and shopping cart logic. Strictly applied Software Development Life Cycle (SDLC) principles.",
-    tags: ["React", "JavaScript", "SDLC"],
-    imageSrc: "\Freshcart-Ecommerce-Template.jpg", // 👈 صورة الـ FreshCart
-    imageAlt: "E-Commerce FreshCart UI Template",
+      "Developed a smart plant monitoring system integrating electronics with an AI-driven decision layer in Python.",
+    tags: ["IoT", "Microcontrollers"],
+    imageSrc: "/Moisture.png", 
+    imageAlt: "IoT plant monitoring system",
+    githubLink: "https://github.com/OmarDiaa5/Moisture-Guard-AI-IoT", // 👈 حط لينك الجيت هاب هنا
   },
   {
     title: "INRC-II Workforce Scheduling System",
     description:
       "Built an optimal scheduling system using a Genetic Algorithm to enforce coverage and legal shift constraints, visualized with Streamlit.",
     tags: ["Python", "Streamlit"],
-    imageSrc: "\INRC.png ", // 👈 صورة الـ Dashboard
+    imageSrc: "/INRC.png", 
     imageAlt: "Workforce scheduling dashboard",
+    githubLink: "https://github.com/OmarDiaa5/inrc2-workforce-scheduling", // 👈 حط لينك الجيت هاب هنا
   },
   {
-    title: "Moisture Guard AI-IoT",
+    title: "E-Commerce Web Application",
     description:
-      "Developed a smart plant monitoring system integrating electronics with an AI-driven decision layer in Python.",
-    tags: ["IoT", "Microcontrollers"],
-    imageSrc: "\Moisture.png", // 👈 صورة السيركت
-    imageAlt: "IoT plant monitoring system",
-  },
+      "Developed a fully functional platform featuring user authentication and shopping cart logic. Strictly applied Software Development Life Cycle (SDLC) principles.",
+    tags: ["React", "JavaScript", "SDLC"],
+    imageSrc: "/Freshcart-Ecommerce-Template.jpg", 
+    imageAlt: "E-Commerce FreshCart UI Template",
+    githubLink: "https://github.com/OmarDiaa5/ecommerce", // 👈 حط لينك الجيت هاب هنا
+  }
 ];
 
 export default function ProjectsSection() {
@@ -69,14 +74,14 @@ export default function ProjectsSection() {
                   isReversed ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
               >
-                {/* Image Section (التعديل الأساسي هنا) */}
+                {/* Image Section */}
                 <div className="relative w-full md:w-1/2">
                   <div className="overflow-hidden rounded-xl border-2 border-primary/20 bg-card shadow-[0_0_30px_rgba(124,58,237,0.15)] transition-all hover:border-primary/50">
                     <div className="relative aspect-[16/9] w-full bg-secondary/20">
                       <img
                         src={project.imageSrc}
                         alt={project.imageAlt}
-                        className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" // ضفت Animation خفيف لما تقف بالماوس
+                        className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                       />
                     </div>
                   </div>
@@ -93,7 +98,6 @@ export default function ProjectsSection() {
                       isReversed ? "md:text-right" : ""
                     }`}
                   >
-                    {/* Glow behind card */}
                     <div className="pointer-events-none absolute inset-0 bg-primary/3" />
                     <div className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
 
@@ -108,7 +112,7 @@ export default function ProjectsSection() {
                         {project.description}
                       </p>
                       <div
-                        className={`flex flex-wrap items-center gap-3 ${
+                        className={`mb-6 flex flex-wrap items-center gap-3 ${
                           isReversed ? "md:justify-end" : ""
                         }`}
                       >
@@ -120,6 +124,19 @@ export default function ProjectsSection() {
                             {tag}
                           </span>
                         ))}
+                      </div>
+
+                      {/* الجزء الجديد للينك GitHub */}
+                      <div className={`flex ${isReversed ? "md:justify-end" : ""}`}>
+                        <a 
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-foreground transition-colors hover:text-primary"
+                        >
+                          <Github className="h-4 w-4" />
+                          View Project
+                        </a>
                       </div>
                     </div>
                   </div>

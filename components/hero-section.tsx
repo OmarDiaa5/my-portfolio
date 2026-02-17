@@ -74,9 +74,9 @@ export default function HeroSection() {
               size="lg"
               className="border-border text-foreground hover:bg-card"
             >
-              <a href="https://drive.google.com/file/d/1QSLZJ8tOJb2TydP4DAUS57TgphoKHCvM/view?usp=sharing" target="_blank" rel="noopener noreferrer"> {/* غيرت اللينك لملف الـ CV */}
+              <a href="https://drive.google.com/drive/folders/1cirDeTYVykBYLVeRwTL3KH2MFXWi7F-O?usp=sharing" target="_blank" rel="noopener noreferrer"> {/* غيرت اللينك لملف الـ CV */}
                 <FileText className="mr-2 h-4 w-4" />
-                View My CV
+                Download Resume & CV
               </a>
             </Button>
           </div>
