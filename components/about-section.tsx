@@ -31,12 +31,7 @@ export default function AboutSection() {
           </div>
           
           <p className="max-w-4xl text-sm leading-relaxed text-muted-foreground md:text-base md:leading-8">
-            I am a Junior Machine Learning Engineer and AI Major at Benha
-            National University. I specialize in building scalable AI
-            solutions, developing deep learning models, and creating
-            generative AI applications. My focus is on bridging the gap
-            between theoretical algorithms and real-world, production-ready
-            intelligent systems.
+            Combining technical coursework in AI with active student leadership as Vice President of the CS Student Union. Developing a strong foundation in Machine Learning by applying Python, Scikit-learn, and Pandas to build introductory models. Gaining hands-on experience in data preprocessing, model evaluation, and computer vision. Deepening technical understanding through the Microsoft DEPI Track, IBM Data Science Professional Certificate, and NVIDIA DLI training. Translating academic concepts into practical code, with a specific interest in autonomous systems.
           </p>
         </motion.div>
       </div>
